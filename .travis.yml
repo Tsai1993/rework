@@ -1,0 +1,13 @@
+before_script:
+  - curl -s -L https://github.com/rust-lang-nursery/mdBook/releases/download/v0.1.5/mdbook-v0.1.5-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
+
+script:
+  - mdbook build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: rework/  # or remove this line to upload from root of repo
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
