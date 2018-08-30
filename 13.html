@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>参考资料 RESOURCES - </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            document.querySelector('html').classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="00.html"><strong aria-hidden="true">1.</strong> 引言 INTRODUCTION</a></li><li><a href="01.html"><strong aria-hidden="true">2.</strong> 第一步 FIRST</a></li><li><a href="02.html"><strong aria-hidden="true">3.</strong> 铲旧谋新 TAKEDOWNS</a></li><li><a href="03.html"><strong aria-hidden="true">4.</strong> 开始行动 GO</a></li><li><a href="04.html"><strong aria-hidden="true">5.</strong> 取得进展 PROGRESS</a></li><li><a href="05.html"><strong aria-hidden="true">6.</strong> 提高生产力 PRODUCTIVITY</a></li><li><a href="06.html"><strong aria-hidden="true">7.</strong> 竞争者 COMPETITORS</a></li><li><a href="07.html"><strong aria-hidden="true">8.</strong> 成长发展 EVOLUTION</a></li><li><a href="08.html"><strong aria-hidden="true">9.</strong> 善于推广 PROMOTION</a></li><li><a href="09.html"><strong aria-hidden="true">10.</strong> 雇用人员 HIRING</a></li><li><a href="10.html"><strong aria-hidden="true">11.</strong> 损失控制 DAMAGE CONTROL</a></li><li><a href="11.html"><strong aria-hidden="true">12.</strong> 文化的产生 CULTURE</a></li><li><a href="12.html"><strong aria-hidden="true">13.</strong> 结语 CONCLUSION</a></li><li><a href="13.html" class="active"><strong aria-hidden="true">14.</strong> 参考资料 RESOURCES</a></li><li><a href="14.html"><strong aria-hidden="true">15.</strong> 致谢 ACKNOWLEDGEMENTS</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="submenu">
+                                <li><button class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li><button class="theme" id="rust">Rust</button></li>
+                                <li><button class="theme" id="coal">Coal</button></li>
+                                <li><button class="theme" id="navy">Navy</button></li>
+                                <li><button class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                        </div>
+
+                        <h1 class="menu-title"></h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="13.html#a参考资料-resources" id="a参考资料-resources"><h2>参考资料 RESOURCES</h2></a>
+<a class="header" href="13.html#a关于-37signals" id="a关于-37signals"><h3>关于 37signals</h3></a>
+<p>37signals</p>
+<p>www.37signals.com</p>
+<p>关于 37signals 及我们的产品</p>
+<p>Rework 网址</p>
+<p>www.37signals.com/rework 本书的官方网站</p>
+<p>Signal vs. Noise</p>
+<p>www.37signals.com/svn 我们关于商务、设计、文化等等的公司博客</p>
+<p>37signals video</p>
+<p>www.37signals.com/speaks 37signals的视频展示和说教</p>
+<p>Subscribe to 37signals newsletters</p>
+<p>www.37signals.com/subscribe 新产品、折扣等等的简报（大概一个月发送 2 次）</p>
+<p>Stuff we like</p>
+<p>www.37signals.com/stuffwelike 我们喜欢的书籍、网站及其他事物的清单</p>
+<p>E-mail</p>
+<p>rework@37signals.com</p>
+<a class="header" href="13.html#a37signals-的产品" id="a37signals-的产品"><h3>37signals 的产品</h3></a>
+<p>Basecamp</p>
+<p>www.basecamphq.com 管理项目及与你的团队、客户的合作</p>
+<p>Highrise</p>
+<p>www.highrisehq.com 跟踪管理你的联系人、线索、交易。总是事先准备好。</p>
+<p>Backpack</p>
+<p>www.backpackit.com 组织和分享你的商务信息</p>
+<p>Campfire</p>
+<p>www.campfirenow.com 与远程团队的实时聊天、档案和代码共享工具</p>
+<p>Ta-da list</p>
+<p>www.tadalist.com Ta-da List 能简单的创建和共享你的待办事项</p>
+<p>Writeboard</p>
+<p>www.writeboard.com 协作书写工具</p>
+<p>Getting Real</p>
+<p>gettingreal.37signals.com 所著的书，帮助你发现更聪明、更快捷、更简单的方法创建一个成功的基于浏览器的应用</p>
+<p>Ruby on Rails</p>
+<p>www.rubyonrails.org 一款开源的 web 编程框架</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="12.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="14.html" class="mobile-nav-chapters next" title="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="12.html" class="nav-chapters previous" title="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="14.html" class="nav-chapters next" title="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if (getComputedStyle(document.querySelector(".fa")).fontFamily !== "FontAwesome") {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = '_FontAwesome/css/font-awesome.css';
+                document.head.insertBefore(link, document.head.firstChild)
+            }
+        </script>
+
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </body>
+</html>

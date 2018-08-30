@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>结语 CONCLUSION - </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            document.querySelector('html').classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="00.html"><strong aria-hidden="true">1.</strong> 引言 INTRODUCTION</a></li><li><a href="01.html"><strong aria-hidden="true">2.</strong> 第一步 FIRST</a></li><li><a href="02.html"><strong aria-hidden="true">3.</strong> 铲旧谋新 TAKEDOWNS</a></li><li><a href="03.html"><strong aria-hidden="true">4.</strong> 开始行动 GO</a></li><li><a href="04.html"><strong aria-hidden="true">5.</strong> 取得进展 PROGRESS</a></li><li><a href="05.html"><strong aria-hidden="true">6.</strong> 提高生产力 PRODUCTIVITY</a></li><li><a href="06.html"><strong aria-hidden="true">7.</strong> 竞争者 COMPETITORS</a></li><li><a href="07.html"><strong aria-hidden="true">8.</strong> 成长发展 EVOLUTION</a></li><li><a href="08.html"><strong aria-hidden="true">9.</strong> 善于推广 PROMOTION</a></li><li><a href="09.html"><strong aria-hidden="true">10.</strong> 雇用人员 HIRING</a></li><li><a href="10.html"><strong aria-hidden="true">11.</strong> 损失控制 DAMAGE CONTROL</a></li><li><a href="11.html"><strong aria-hidden="true">12.</strong> 文化的产生 CULTURE</a></li><li><a href="12.html" class="active"><strong aria-hidden="true">13.</strong> 结语 CONCLUSION</a></li><li><a href="13.html"><strong aria-hidden="true">14.</strong> 参考资料 RESOURCES</a></li><li><a href="14.html"><strong aria-hidden="true">15.</strong> 致谢 ACKNOWLEDGEMENTS</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="submenu">
+                                <li><button class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li><button class="theme" id="rust">Rust</button></li>
+                                <li><button class="theme" id="coal">Coal</button></li>
+                                <li><button class="theme" id="navy">Navy</button></li>
+                                <li><button class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                        </div>
+
+                        <h1 class="menu-title"></h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="12.html#a结语-conclusion" id="a结语-conclusion"><h2>结语 CONCLUSION</h2></a>
+<a class="header" href="12.html#a灵感易逝" id="a灵感易逝"><h3>灵感易逝</h3></a>
+<p>我们每个人都有想法。想法是不朽的。它们会永远存在。</p>
+<p>不会永远存在的是灵感。灵感就像新鲜的水果或者牛奶：它有保质期。</p>
+<p>如果你想做什么，现在就去做。你不能把它搁在架子上等两个月再抽时间去做。你不能说稍后再做。稍后你就没那么激动了。</p>
+<p>如果你在星期五时灵感来了，就下决心在周末就投入这个项目。如果你灵感涌动，两个星期的工作你只要 24 小时就能完成。灵感此时成了时间机器。</p>
+<p>灵感是神奇的东西，是生产力的倍增器，激励因素。但是它不会等你。灵感是现在的事。如果灵感找上你了，你也要抓住它，然后投入工作。</p>
+<p>谢谢你阅读我们的书。</p>
+<p>我们希望它能启发你去重塑你的工作。如果是这样，可以通过 rework@37signals.com 联系我们，让我们了解你的进展。我们期待你的来信。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="11.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="13.html" class="mobile-nav-chapters next" title="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="11.html" class="nav-chapters previous" title="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="13.html" class="nav-chapters next" title="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if (getComputedStyle(document.querySelector(".fa")).fontFamily !== "FontAwesome") {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = '_FontAwesome/css/font-awesome.css';
+                document.head.insertBefore(link, document.head.firstChild)
+            }
+        </script>
+
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </body>
+</html>
